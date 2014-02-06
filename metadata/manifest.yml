@@ -8,6 +8,7 @@ License: MIT
 Vendor: mmcgrathcommunity
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: mmcgrathcommunity
+Source-Url: https://github.com/mmcgrath-openshift/openshift-dash-cartridge.git/
 Website: https://github.com/afaqurk/linux-dash/wiki
 Categories:
 - embedded
