@@ -1,0 +1,38 @@
+---
+Name: openshift-dash-cartridge
+Cartridge-Short-Name: DASH
+Display-Name: dash 0.1
+Description: Web based MySQL admin tool. Requires the MySQL cartridge to be installed
+Version: '0.1'
+License: MIT
+Vendor: mmcgrathcommunity
+Cartridge-Version: 0.0.1
+Compatible-Versions:
+Cartridge-Vendor: mmcgrathcommunity
+Website: https://github.com/afaqurk/linux-dash/wiki
+Categories:
+- embedded
+Cart-Data:
+- Key: connection_url
+  Type: cart_data
+  Description: Dash connection URL
+Provides:
+- dash
+Publishes:
+  get-serve-info:
+    Type: NET_TCP:db-config:url
+Subscribes:
+Scaling:
+  Min: 1
+  Max: 1
+Configure-Order:
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: PORT
+  Private-Port: 8080
+  Public-Port-Name: PROXY_PORT
+  Protocols:
+  - http
+  Mappings:
+  - Frontend: /dash
+    Backend: /dash
