@@ -15,6 +15,8 @@ esac
 
 ln -s ${_libdir}/httpd/modules ${OPENSHIFT_DASH_DIR}modules
 ln -s /etc/httpd/conf/magic ${OPENSHIFT_DASH_DIR}conf/magic
+cp -r ${OPENSHIFT_DASH_DIR}/versions/$version/conf/* ${OPENSHIFT_DASH_DIR}/conf/
+cp -r ${OPENSHIFT_DASH_DIR}/versions/$version/conf.d/* ${OPENSHIFT_DASH_DIR}/conf.d/
 
 client_result "URL: https://$OPENSHIFT_GEAR_DNS/dash/"
 
